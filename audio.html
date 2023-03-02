@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta chrset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest Policy Audio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <audio id="idAudio">
+      <source src="lego-yoda-death-sound-effect.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="row">
+      <div
+        class="column"
+        id="blue"
+        style="background-color: #25d;"
+        onclick="playaudio()"
+        type="button"
+      ></div>
+      <div
+        class="column"
+        style="background-color: #fd4;"
+        onclick="pauseaudio()"
+        type="button"
+      ></div>
+      <div
+        class="column"
+        style="background-color: #000;"
+        onclick="stopaudio()"
+        type="button"
+      ></div>
+    </div>
+    <script>
+      //   let play = document.getElementById('blue')
+      //   function playMusic() {
+      //     let aud = new Audio('lego-yoda-death-sound-effect.mp3')
+      //     aud.play()
+      //   }
+      //   play.addEventListener('click', playMusic)
+      const a = document.getElementById('idAudio')
+      function playaudio() {
+        a.play()
+      }
+      function pauseaudio() {
+        a.pause()
+      }
+      function stopaudio() {
+        a.pause()
+        a.currentTime = 0
+      }
+    </script>
+  </body>
+</html>
