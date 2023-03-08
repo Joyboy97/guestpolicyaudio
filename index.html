@@ -9,30 +9,36 @@
   </head>
 
   <body>
-    <audio id="idAudio">
-      <source src="guestpolicy.mp3" type="audio/mpeg" />
+    <audio id="instructutions" onplay="pauseOthers();" autoplay>
+      <source src="audioinstructions.mp3" />
     </audio>
-    <div class="row">
-      <div
-        class="column"
-        id="blue"
-        style="background-color: #25d;"
-        onclick="playaudio()"
-        type="button"
-      ></div>
-      <div
-        class="column"
-        style="background-color: #fd4;"
-        onclick="pauseaudio()"
-        type="button"
-      ></div>
-      <div
-        class="column"
-        style="background-color: #000;"
-        onclick="stopaudio()"
-        type="button"
-      ></div>
-    </div>
+
+    <audio id="idAudio">
+      <source src="realgymsafety.mp3" type="audio/mpeg" />
+    </audio>
+    <!-- <div class="row"> -->
+    <div
+      class="column"
+      id="blue"
+      style="background-color: #25d;"
+      onclick="playaudio()"
+      type="button"
+    ></div>
+    <br />
+    <div
+      class="column"
+      style="background-color: #fd4;"
+      onclick="pauseaudio()"
+      type="button"
+    ></div>
+    <br />
+    <div
+      class="column"
+      style="background-color: #000;"
+      onclick="stopaudio()"
+      type="button"
+    ></div>
+    <!-- </div> -->
     <script>
       //   let play = document.getElementById('blue')
       //   function playMusic() {
@@ -50,6 +56,9 @@
       function stopaudio() {
         a.pause()
         a.currentTime = 0
+      }
+      function pauseOthers() {
+        a.pause()
       }
     </script>
   </body>
